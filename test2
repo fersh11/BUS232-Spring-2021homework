@@ -1,0 +1,14 @@
+n=int(input("Enter the number of shares: "))
+List.append(n)
+sum=sum+n
+if n=0:
+    break;
+mVote=int((sum/2)+1)
+print("There is a total of ",sum,"shares presented here.')
+print("Shared needed for majority vote is ",mVote)
+for i in range(0,len(List)):
+    share=share+List[i]
+    if(share>mViote):
+        x=i
+        break
+    print("The necessary support of top",x,"shareholders for number of votes")
