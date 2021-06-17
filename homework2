@@ -1,0 +1,5 @@
+print("Hi, I am chatbot. please state your name ")
+userinput= input()
+print("Thank you",userinput,"How can i help you\n")
+userinput1=input()
+print("Searching for ",userinput1)
