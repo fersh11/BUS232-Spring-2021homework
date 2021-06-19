@@ -1,0 +1,43 @@
+def guest_list_creator():
+    guest_list = []
+    num_guests = int(input("How many guests do you want to enter: "))
+
+    for guest in range(num_guests):
+        guest_name = input("Enter guest name: ")
+        guest_list.append(guest_name)
+
+    return guest_list
+
+
+def unified_guest_list():
+    guest_list = guest_list_creator()
+
+    unified_list = []
+
+    for guest_name in guest_list:
+        if guest_name in unified_list:
+            continue
+        else:
+            unified_list.append(guest_name)
+
+    unified_list.sort()
+    return unified_list
+
+
+final_list = []
+unified_final_list = []
+
+for i in range(6):
+    guest_list = unified_guest_list()
+    final_list.append(guest_list)
+
+for guest_list in final_list:
+    for name in guest_list:
+        if name in unified_final_list:
+            continue
+        else:
+            unified_final_list.append(name)
+
+unified_final_list.sort()
+
+print(f'\n\nFinal guest list: {unified_final_list}')
